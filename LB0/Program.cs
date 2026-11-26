@@ -18,13 +18,13 @@ namespace laba1
             m = Convert.ToInt32(Console.ReadLine());
             double[,] array = new double[n, m];
             Random r = new Random();
-            Console.WriteLine("Массив:");
+            Console.WriteLine("Массив:"); //создание массива
             for (int i = 0; i < n; i++)
             {
 
                 for (int j = 0; j < m; j++)
                 {
-                    array[i, j] = r.Next(-5, 5);
+                    array[i, j] = r.Next(-10, 10);
 
                     Console.Write("{0}\t", array[i, j]);
                 }
@@ -48,7 +48,7 @@ namespace laba1
                 for (int j = 0; j < m; j++)
                 {
                     array[i, j] = array[i, j] / max;
-                    Console.Write("{0}\t", array[i, j]);
+                    Console.Write("{0}\t", Math.Round((array[i, j]), 2));
                 }
                 Console.WriteLine();
             }
@@ -57,4 +57,3 @@ namespace laba1
         }
     }
 }
-
