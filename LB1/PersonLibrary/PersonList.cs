@@ -35,7 +35,7 @@
         {
             int index = IndexOf(person);
 
-            if (index == -1) ;
+            if (index == -1) 
             {
                 return false;
             }
@@ -76,7 +76,13 @@
             _persons = new Person[4];
             _count = 0;
         }
-        public int Count => _count;
-
+        public int Count
+        {
+            get { return _count; }
+        }
+        public Person this[int index]
+        {
+            get { return _persons[index]; }
+        }
     }
 }
